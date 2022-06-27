@@ -15,6 +15,8 @@ export default async function handler(req: IncomingMessage, res: ServerResponse)
             res.end(html);
             return;
         }
+
+        
         const { fileType } = parsedReq;
         const file = await getScreenshot(html, fileType, isDev);
         res.statusCode = 200;

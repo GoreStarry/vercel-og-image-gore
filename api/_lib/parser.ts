@@ -24,7 +24,7 @@ export function parseRequest(req: IncomingMessage) {
     } else {
         extension = arr.pop() as string;
         text = arr.join('.');
-    }
+}
 
     const parsedRequest: ParsedRequest = {
         fileType: extension === 'jpeg' ? extension : 'png',

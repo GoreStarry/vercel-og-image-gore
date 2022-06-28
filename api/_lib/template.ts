@@ -10,6 +10,7 @@ import { ParsedRequest } from './types';
 // const rglr = readFileSync(`${__dirname}/../_fonts/Inter-Regular.woff2`).toString('base64');
 // const bold = readFileSync(`${__dirname}/../_fonts/Inter-Bold.woff2`).toString('base64');
 // const mono = readFileSync(`${__dirname}/../_fonts/Vera-Mono.woff2`).toString('base64');
+const Quantico = readFileSync(`${__dirname}/../_fonts/Quantico-Regular.ttf`).toString('base64');
 // const css = readFileSync(`${__dirname}/test.css`).toString();
 const resetCSS = readFileSync(`${__dirname}/../../template/reset.min.css`).toString();
 const oneNightCSS = readFileSync(`${__dirname}/../../template/ones-game-night/ones-game-night.css`).toString();
@@ -31,6 +32,10 @@ export function getHtml(parsedReq: ParsedRequest) {
     <style>
         ${resetCSS}
         ${oneNightCSS}
+        @font-face {
+            font-family: Quantico;
+            src: url(data:font/truetype;charset=utf-8;base64,${Quantico})  format("truetype");
+        }
     </style>
     <body>
         <div class="container">
